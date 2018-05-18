@@ -1,0 +1,15 @@
+{
+  "name": "drillone",
+  "version": "1.0.0",
+  "description": "Unit 3 drill 1 API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "drillOne"
+  },
+  "author": "Tim Hurley",
+  "license": "ISC"
+}
