@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const data = require('./cohorts.js')
-const port = 5000;
+const port = process.env.PORT || 8080;
 const app = express();
 
 app.use(cors());
