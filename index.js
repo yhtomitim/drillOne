@@ -8,7 +8,6 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   res.json(data);
-  // console.log(Array.isArray(data.data));
 })
 
 app.get('/:id', (req, res) => {
