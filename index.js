@@ -12,22 +12,22 @@ app.get('/', (req, res) => {
 })
 
 app.get('/:id', (req, res) => {
-  let idParam = parseInt(req.params.id);
-  let testing = data.data.filter((index) => index.id === idParam);
+  let idParam = req.params.id;
+  let findId = data.data.filter((index) => index.id == idParam);
   
-  if (testing.length === 0) {
+  if (!findId.length) {
     res.status(404);
     res.json({ "message": "No record found!" });
   } else {
     const acc = {
       data: {
-        id: Number,
-        cohortName: String,
-        cohortCode: String,
-        numberOfStudents: Number
+        id: undefined,
+        cohortName: undefined,
+        cohortCode: undefined,
+        numberOfStudents: undefined
       }
     };
-     let formattedResponse = testing.reduce((acc, cv) => {
+     let formattedResponse = findId.reduce((acc, cv) => {
       acc.data.id = cv.id;
       acc.data.cohortName = cv.cohortName;
       acc.data.cohortCode = cv.cohortCode;
