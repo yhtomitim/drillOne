@@ -17,32 +17,15 @@ app.get('/:id', (req, res) => {
   
   if (!findId.length) {
     res.status(404);
-    res.json({ "message": "No record found!" });
-  } else {
-    // const acc = {
-    //   data: {
-    //     id: undefined,
-    //     cohortName: undefined,
-    //     cohortCode: undefined,
-    //     numberOfStudents: undefined
-    //   }
-    // };
-    //  let formattedResponse = findId.reduce((acc, cv) => {
-    //   acc.data.id = cv.id;
-    //   acc.data.cohortName = cv.cohortName;
-    //   acc.data.cohortCode = cv.cohortCode;
-    //   acc.data.numberOfStudents = cv.numberOfStudents;
-    //   return acc;
-    // }, acc);
-    // res.json(formattedResponse);
-    res.json({
-      data: {
-        id: findId[0].id,
-        cohortName: findId[0].cohortName,
-        cohortCode: findId[0].cohortCode,
-        numberOfStudents: findId[0].numberOfStudents
-    }})
+    return res.json({ "message": "No record found!" });
   }
+  return res.json({
+    data: {
+      id: findId[0].id,
+      cohortName: findId[0].cohortName,
+      cohortCode: findId[0].cohortCode,
+      numberOfStudents: findId[0].numberOfStudents
+  }})
 });
 
 app.listen(port, () => {
