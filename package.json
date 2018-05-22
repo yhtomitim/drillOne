@@ -4,7 +4,11 @@
   "description": "Unit 3 drill 1 API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": ">=9.0.0"
   },
   "repository": {
     "type": "git",
@@ -12,11 +16,8 @@
   },
   "author": "Tim Hurley",
   "license": "ISC",
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-node": "^6.0.1"
-  },
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.3"
   }
 }
