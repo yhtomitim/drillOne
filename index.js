@@ -19,12 +19,8 @@ app.get('/:id', (req, res) => {
     return res.json({ "message": "No record found!" });
   }
   return res.json({
-    data: {
-      id: findId[0].id,
-      cohortName: findId[0].cohortName,
-      cohortCode: findId[0].cohortCode,
-      numberOfStudents: findId[0].numberOfStudents
-  }})
+    data: findId[0]
+  })
 });
 
 app.listen(port, () => {
